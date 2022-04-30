@@ -1,0 +1,6 @@
+p, a, li, ul {
+    margin: 0;
+    padding: 0;
+}
+
+.container::-webkit-scrollbar {   display: none; }.container {   -ms-overflow-style: none; }

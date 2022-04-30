@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-q&&gawyiaq42@d^0bl#=nm75=afsslg!p7w*onf7i^3r_ncjup
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['157.245.243.55', 'dribbleclone.xyz', 'www.dribbleclone.xyz']
 
 
 # Application definition
@@ -60,7 +60,7 @@ ROOT_URLCONF = 'dribble.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'build')],
+        'DIRS': [os.path.join(BASE_DIR, 'frontend/build')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -126,7 +126,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'build/static')
+    os.path.join(BASE_DIR, 'frontend/build/static'),
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
