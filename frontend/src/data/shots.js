@@ -31,6 +31,7 @@ export const SHOTS = [
         title: 'Open Source Interface',
         bio: 'UI UX Designer - Taking New Projects',
         category: 'Mobile',
+        video: false,
         profile_picture: 'https://cdn.dribbble.com/users/6252196/avatars/normal/37273ca2df8a8a4e6cd0cd1379f58f65.png?1639455576',
         posts: {
             thumbnail: 'https://cdn.dribbble.com/users/4189231/screenshots/17457168/media/164f2511fdb53b682535e47b542862fb.png?compress=1&resize=1200x900&vertical=top',
@@ -48,6 +49,7 @@ export const SHOTS = [
         title: 'Developer experience: hero section',
         bio: 'Helping digital innovators to create a worthy web presence',
         category: 'Branding',
+        video: false,
         profile_picture: profiles.pr1,
         posts: {
             thumbnail: shot.ts6,
@@ -65,6 +67,7 @@ export const SHOTS = [
         title: 'Film Camera',
         bio: 'Studio Lighting and Photography',
         category: 'Webdesign',
+        video: false,
         profile_picture: profiles.pr2,
         posts: {
             thumbnail: shot.ts1,
@@ -82,6 +85,7 @@ export const SHOTS = [
         title: 'Outdoot Camping',
         bio: 'Motion Graphics Designer | Animator',
         category: 'Branding',
+        video: false,
         profile_picture: profiles.pr5,
         posts: {
             thumbnail: shot.ts5,
@@ -99,6 +103,7 @@ export const SHOTS = [
         title: 'Payments Faster',
         bio: 'Financial Services - FinTech',
         category: 'Product Design',
+        video: false,
         profile_picture: profiles.pr1,
         posts: {
             thumbnail: shot.ts1,
@@ -116,7 +121,26 @@ export const SHOTS = [
         title: 'Internal Analytics Web App',
         bio: 'IA MDD',
         category: 'Product Design',
+        video: false,
         profile_picture: profiles.pr3,
+        posts: {
+            thumbnail: shot.ts1,
+            caption: 'Durban sunsets are the best.',
+            post_shots: [shot.ts2, shot.ts1, shot.ts4, shot.ts2],
+        }
+    },
+    {
+        thumbnail: 'https://cdn.dribbble.com/users/174531/videos/300683/us_-_new_-_b_xlarge_preview.mp4',
+        user: 'Square Space',
+        likes: '732',
+        views: '1.8k',
+        type: 'AD',
+        city: 'San Francisco, USA',
+        title: 'Website Builder',
+        bio: 'CLEAN WEBSITE BUILDER',
+        category: 'ad',
+        video: true,
+        profile_picture: profiles.pr1,
         posts: {
             thumbnail: shot.ts1,
             caption: 'Durban sunsets are the best.',
@@ -133,6 +157,7 @@ export const SHOTS = [
         title: 'Digital Banking',
         bio: 'Invest with us not now.',
         category: 'Product Design',
+        video: false,
         profile_picture: profiles.pr7,
         posts: {
             thumbnail: shot.ts1,
@@ -150,6 +175,7 @@ export const SHOTS = [
         title: 'NC City Map',
         bio: 'The city that you Love.',
         category: 'Branding',
+        video: false,
         profile_picture: profiles.pr5,
         posts: {
             thumbnail: shot.ts1,
@@ -167,6 +193,7 @@ export const SHOTS = [
         title: 'Local Real Estate',
         bio: 'Professional Service Proven Results.',
         category: 'Branding',
+        video: false,
         profile_picture: profiles.pr10,
         posts: {
             thumbnail: shot.ts1,
@@ -184,6 +211,7 @@ export const SHOTS = [
         title: 'Pay Payments',
         bio: 'FAST, RELIABLE PAYMENTS',
         category: 'Webdesign',
+        video: false,
         profile_picture: profiles.pr8,
         posts: {
             thumbnail: shot.ts1,
@@ -201,6 +229,7 @@ export const SHOTS = [
         title: 'Subscription Software',
         bio: 'Integrate Subscriptions to your website.',
         category: 'Webdesign',
+        video: false,
         profile_picture: profiles.pr3,
         posts: {
             thumbnail: shot.ts1,
@@ -218,6 +247,7 @@ export const SHOTS = [
         title: 'Peer to Peer App',
         bio: 'Seamless Payments with your family,friends and business partners.',
         category: 'Mobile',
+        video: false,
         profile_picture: profiles.pr1,
         posts: {
             thumbnail: shot.ts1,

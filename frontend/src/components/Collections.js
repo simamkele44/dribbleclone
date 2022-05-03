@@ -20,6 +20,7 @@ import ViewsIcon from '../images/viewsicon.svg';
 import MsgIcon from '../images/msgicon.svg';
 import HeartIcon from '../images/hearticon.svg';
 import CloseIcon from '../images/closeicon.svg';
+import SqrVid from '../images/vid.mp4';
 
 function Collections() {
     const [modalShow, setModalShow] = useState(false);
@@ -48,6 +49,7 @@ function Collections() {
         }
     }
     const [shot, setShot] = useState(default_shot);
+    const [videoclick, setVideoclick] = useState(false);
 
     return (
         <div>
@@ -56,11 +58,29 @@ function Collections() {
                     {SHOTS.map((shot, index) =>(
                         <Col xs={6} md={3} lg={3} className="shots_col">
                                 
-                                <Shot data-toggle="modal" data-target="#modal-fullscreen-xl" onClick={() => {setShot(shot)}}>
+                                <Shot data-toggle="modal" data-target="#modal-fullscreen-xl" onClick={() => {
+                                    if(!shot.video){
+                                        setShot(shot);
+                                        setVideoclick(false);
+                                    }else{
+                                        setVideoclick(true);
+                                    }
+                                    
+                                }}>
                                     <ThumbnailContainer>
                                         <Thumbnail>
+                                            {shot.video? 
+                                            <video autoPlay muted src={SqrVid} loop>
+                                                
+                                            </video>
+                                            :
                                             <img src={shot.thumbnail}/>
+                                            }
+                                            
                                         </Thumbnail>
+                                        {shot.video?
+                                        null
+                                        :
                                         <ShotInfo>
                                             <ShotActions className="shot_actions">
                                                 <ShotTitle>
@@ -75,7 +95,10 @@ function Collections() {
                                                     </ShotLike>
                                                 </ShotAction>
                                             </ShotActions>
-                                        </ShotInfo>
+                                        </ShotInfo>                                        
+                                        }
+
+
                                     </ThumbnailContainer>
                                     <ShotSummary>
                                         <ShotCreatorInfo>
@@ -131,6 +154,10 @@ function Collections() {
                 </Row>
 
             </CollectionContainer>
+
+            {videoclick ?
+            null
+            :
             <ModalContainer>
 
             <div class="modal modal-fullscreen-xl" id="modal-fullscreen-xl" tabindex="-1" role="dialog" aria-hidden="true" style={{background: 'rgba(0, 0, 0, 0.7)'}}>
@@ -209,6 +236,7 @@ function Collections() {
             </div>
 
             </ModalContainer>
+            }
 
         </div>
     
@@ -455,6 +483,11 @@ const ThumbnailContainer = styled.div`
 const Thumbnail = styled.div`
     border-radius: 10px;
     img {
+        border-radius: 10px;
+        width: 100%;
+    }
+
+    video {
         border-radius: 10px;
         width: 100%;
     }
