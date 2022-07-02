@@ -252,7 +252,7 @@ const CollectionContainer = styled.div`
     position: relative;
 
     .shots_col {
-        margin-top: 15px; 
+        margin-top: 35px; 
     }
 
     .modal-content {
